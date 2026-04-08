@@ -43,7 +43,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       <section style={{ background: C.bg, padding: "72px 0" }}>
         <div className="container">
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
-            <p style={{ color: C.textMuted, fontSize: "1.05rem", lineHeight: 1.85, fontWeight: 500, marginBottom: 32, color: C.text }}>
+            <p style={{ color: C.text, fontSize: "1.05rem", lineHeight: 1.85, fontWeight: 500, marginBottom: 32 }}>
               {article.excerpt}
             </p>
             <div style={{ borderTop: "2px solid #00AEEF", width: 44, marginBottom: 32 }} />

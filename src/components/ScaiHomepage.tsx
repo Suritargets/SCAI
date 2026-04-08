@@ -126,7 +126,7 @@ export default function SCAIWebsite() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollTo = (href) => {
+  const scrollTo = (href: string) => {
     const id = href.replace("#", "");
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });

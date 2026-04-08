@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(npm install:*)",
-      "WebFetch(domain:scai.sr)"
+      "WebFetch(domain:scai.sr)",
+      "Bash(npm run:*)"
     ]
   }
 }
