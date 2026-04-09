@@ -5,7 +5,6 @@ import Link from "next/link";
 import { C, MEMBERS } from "@/lib/constants";
 
 export default function LidmaatschapPage() {
-  const [membersOpen, setMembersOpen] = useState(false);
   const [memberSearch, setMemberSearch] = useState("");
 
   return (
@@ -27,11 +26,10 @@ export default function LidmaatschapPage() {
       <section style={{ background: C.bgAlt, padding: "80px 0" }}>
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: 580, margin: "0 auto 20px" }}>
-            <p style={{ color: C.textMuted, lineHeight: 1.75, fontSize: "0.95rem", marginBottom: 20 }}>
+            <p style={{ color: C.textMuted, lineHeight: 1.75, fontSize: "0.95rem" }}>
               Membership is mandatory for all professional accountants who wish to practice
               publicly in Suriname.
             </p>
-            <button className="btn-primary" onClick={() => setMembersOpen(true)}>View Member List</button>
           </div>
 
           <div style={{ height: 40 }} />
@@ -100,71 +98,87 @@ export default function LidmaatschapPage() {
         </div>
       </section>
 
-      {membersOpen && (
-        <div className="modal-overlay" onClick={() => setMembersOpen(false)}>
-          <div className="modal-box" onClick={e => e.stopPropagation()}>
-            <div className="modal-header">
-              <div>
-                <h2 style={{ fontSize: "1.3rem", fontWeight: 700, color: "#2B3990", marginBottom: 4 }}>Registered Members</h2>
-                <p style={{ color: "#9CA3AF", fontSize: "0.8rem" }}>{MEMBERS.length} members registered with SCAI</p>
-              </div>
-              <button className="modal-close" onClick={() => setMembersOpen(false)}>{"\u2715"}</button>
+      {/* Member List */}
+      <section style={{ background: "white", padding: "72px 0" }}>
+        <div className="container">
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16, marginBottom: 28 }}>
+            <div>
+              <h2 style={{ fontSize: "1.4rem", fontWeight: 700, color: "#111827", marginBottom: 4 }}>Registered Members</h2>
+              <p style={{ color: "#9CA3AF", fontSize: "0.8rem" }}>{MEMBERS.length} members registered with SCAI</p>
             </div>
-            <div style={{ padding: "16px 32px 0" }}>
-              <div style={{ position: "relative" }}>
-                <span style={{ position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", color: "#9CA3AF", fontSize: "0.95rem" }}>{"\u{1F50D}"}</span>
-                <input
-                  className="search-input"
-                  type="text"
-                  placeholder="Search by name or organization..."
-                  value={memberSearch}
-                  onChange={e => setMemberSearch(e.target.value)}
-                />
-              </div>
+            <div style={{ position: "relative" }}>
+              <span style={{ position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", color: "#9CA3AF", fontSize: "0.95rem" }}>🔍</span>
+              <input
+                className="search-input"
+                type="text"
+                placeholder="Search by name or organization..."
+                value={memberSearch}
+                onChange={e => setMemberSearch(e.target.value)}
+              />
             </div>
-            <div style={{ padding: "12px 32px 8px", display: "grid", gridTemplateColumns: "1fr 1fr 100px", fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#9CA3AF" }}>
+          </div>
+
+          {/* Table — scrollable on small screens */}
+          <div style={{ overflowX: "auto" }}>
+            {/* Table header */}
+            <div style={{ display: "grid", gridTemplateColumns: "40px 1fr 1fr 130px 180px 110px 130px", padding: "10px 16px", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#9CA3AF", borderBottom: "2px solid #E5EBF5", minWidth: 860 }}>
+              <span>#</span>
               <span>Name</span>
               <span>Organization</span>
+              <span>Phone</span>
+              <span>Email</span>
               <span>SCAI No.</span>
+              <span>Reg. Date</span>
             </div>
-            <div className="modal-body">
-              {MEMBERS
-                .filter(m => {
-                  if (!memberSearch) return true;
-                  const q = memberSearch.toLowerCase();
-                  return `${m.firstName} ${m.name}`.toLowerCase().includes(q) || m.organization.toLowerCase().includes(q);
-                })
-                .map((m, i) => (
-                  <div key={i} className="member-row">
-                    <div>
-                      <div style={{ fontWeight: 600, fontSize: "0.92rem", color: "#111827" }}>
-                        {m.firstName} {m.name}
-                      </div>
-                      <div style={{ fontSize: "0.75rem", color: "#9CA3AF", marginTop: 2 }}>
-                        {m.title} &middot; {m.title2}
-                      </div>
-                    </div>
-                    <div style={{ fontSize: "0.85rem", color: "#4B5563", display: "flex", alignItems: "center" }}>
-                      {m.organization || "\u2014"}
-                    </div>
-                    <div style={{ fontSize: "0.78rem", color: "#0075BE", fontWeight: 600, display: "flex", alignItems: "center" }}>
-                      {m.scaiNo}
-                    </div>
-                  </div>
-                ))}
-              {MEMBERS.filter(m => {
+
+            {/* Rows */}
+            {MEMBERS
+              .filter(m => {
                 if (!memberSearch) return true;
                 const q = memberSearch.toLowerCase();
                 return `${m.firstName} ${m.name}`.toLowerCase().includes(q) || m.organization.toLowerCase().includes(q);
-              }).length === 0 && (
-                <div style={{ padding: "40px 32px", textAlign: "center", color: "#9CA3AF" }}>
-                  No members found for &ldquo;{memberSearch}&rdquo;
+              })
+              .map((m, i) => (
+                <div key={i} style={{ display: "grid", gridTemplateColumns: "40px 1fr 1fr 130px 180px 110px 130px", padding: "14px 16px", borderBottom: "1px solid #F3F4F6", alignItems: "center", minWidth: 860 }}>
+                  <div style={{ fontSize: "0.78rem", color: "#9CA3AF" }}>{m.no}</div>
+                  <div>
+                    <div style={{ fontWeight: 600, fontSize: "0.88rem", color: "#111827" }}>
+                      {m.firstName} {m.name}
+                    </div>
+                    <div style={{ fontSize: "0.72rem", color: "#9CA3AF", marginTop: 2 }}>
+                      {m.title}{m.title2 ? ` · ${m.title2}` : ""} · {m.gender === "F" ? "Female" : "Male"}
+                    </div>
+                  </div>
+                  <div style={{ fontSize: "0.82rem", color: "#4B5563", paddingRight: 8 }}>
+                    {m.organization || "—"}
+                  </div>
+                  <div style={{ fontSize: "0.78rem", color: "#4B5563" }}>
+                    {m.phone || "—"}
+                  </div>
+                  <div style={{ fontSize: "0.75rem", color: "#4B5563", wordBreak: "break-all" }}>
+                    {m.email ? <a href={`mailto:${m.email}`} style={{ color: "#0075BE", textDecoration: "none" }}>{m.email}</a> : "—"}
+                  </div>
+                  <div style={{ fontSize: "0.78rem", color: "#0075BE", fontWeight: 600 }}>
+                    {m.scaiNo}
+                  </div>
+                  <div style={{ fontSize: "0.75rem", color: "#6B7280" }}>
+                    {m.regDate}
+                  </div>
                 </div>
-              )}
-            </div>
+              ))}
+
+            {MEMBERS.filter(m => {
+              if (!memberSearch) return true;
+              const q = memberSearch.toLowerCase();
+              return `${m.firstName} ${m.name}`.toLowerCase().includes(q) || m.organization.toLowerCase().includes(q);
+            }).length === 0 && (
+              <div style={{ padding: "40px", textAlign: "center", color: "#9CA3AF" }}>
+                No members found for &ldquo;{memberSearch}&rdquo;
+              </div>
+            )}
           </div>
         </div>
-      )}
+      </section>
     </>
   );
 }
