@@ -106,6 +106,19 @@ export default function LidmaatschapPage() {
               <h2 style={{ fontSize: "1.4rem", fontWeight: 700, color: "#111827", marginBottom: 4 }}>Registered Members</h2>
               <p style={{ color: "#9CA3AF", fontSize: "0.8rem" }}>{MEMBERS.length} members registered with SCAI</p>
             </div>
+            <a
+              href="/SCAI memberslist -  CA Register updated per 9 maart 2026 - website.pdf"
+              download
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 8,
+                padding: "10px 20px", background: "#2B3990", color: "white",
+                fontWeight: 700, fontSize: "0.75rem", letterSpacing: "0.1em",
+                textTransform: "uppercase", textDecoration: "none", borderRadius: 4,
+                transition: "background 0.2s",
+              }}
+            >
+              <span style={{ fontSize: "1rem" }}>⬇</span> Download PDF
+            </a>
             <div style={{ position: "relative" }}>
               <span style={{ position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", color: "#9CA3AF", fontSize: "0.95rem" }}>🔍</span>
               <input
