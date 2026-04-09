@@ -116,7 +116,7 @@ export default function RulesTabs() {
             {active === "legislations" && (
               <div>
                 <h2 style={{ fontSize: "1.4rem", fontWeight: 700, color: "#111827", marginBottom: 20 }}>Legislations</h2>
-                <a href="#" style={{
+                <a href="/S.B.-2018-no.-92-Wet-Suriname-Chartered-Accountants-Institute.pdf" download style={{
                   display: "inline-block",
                   padding: "10px 20px",
                   border: "1px solid #D1D5DB",
