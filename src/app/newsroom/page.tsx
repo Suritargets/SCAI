@@ -51,10 +51,10 @@ export default function NewsroomPage() {
             <h2 style={{ fontSize: "1.4rem", fontWeight: 700, color: "#111827", marginBottom: 24 }}>Newsletters</h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               {[
-                "SCAI Newsletter 2021 JUNE",
-                "SCAI Newsletter 2021 November",
-              ].map((name, i) => (
-                <a key={i} href="#" style={{
+                { name: "SCAI Newsletter 2021 JUNE", href: "/Final-SCAI-NEWS-june-2021.pdf" },
+                { name: "SCAI Newsletter 2021 November", href: "#" },
+              ].map((item, i) => (
+                <a key={i} href={item.href} download={item.href !== "#" ? true : undefined} style={{
                   display: "block",
                   padding: "14px 20px",
                   border: "1px solid #D1D5DB",
@@ -65,7 +65,7 @@ export default function NewsroomPage() {
                   background: "white",
                   transition: "border-color 0.2s",
                 }}>
-                  {name}
+                  {item.name}
                 </a>
               ))}
             </div>
