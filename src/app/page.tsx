@@ -242,9 +242,9 @@ export default function HomePage() {
           {/* Students card with dark overlay */}
           <div style={{
             position: "relative", overflow: "hidden",
-            backgroundImage: "url('/conference.png')",
-            backgroundSize: "210%",
-            backgroundPosition: "48% 60%",
+            backgroundImage: "url('/searching_jobs.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
             minHeight: 320,
           }}>
             <div style={{
