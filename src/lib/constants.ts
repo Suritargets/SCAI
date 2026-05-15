@@ -125,6 +125,16 @@ export const MANDATES = [
 
 export const TRAINING_EVENTS = [
   {
+    slug: "scai-flyer-ca-opleiding-2026",
+    title: "SCAI – Flyer CA Opleiding 2026",
+    date: "May 15, 2026",
+    image: "/conference.png",
+    excerpt: "Start Chartered Accountants (CA) Opleiding 2026. Toegang: Accountants met een afgeronde (theoretische) accountantsopleiding. Deadline aanmelding: 22 mei 2026.",
+    content: `De CA-OPLEIDING 2026 bestaat uit de volgende modules:\n\n- Fiscaal recht\n- Algemeen recht\n- Ethiek\n- Statements of Membership Obligations (SMO's)\n\nDe opleiding gaat in juni 2026 van start!\n\nToegang: Accountants met een afgeronde (theoretische) accountantsopleiding\n\nAanmelden via: info@scai.sr\nKosten opleiding: US$ 2.500 (bij tenminste 5 deelnemers)\nLesdagen: 1 keer per week\nCollege duur: 2-3 uren\nDeadline aanmelding: 22 mei 2026`,
+    category: "Training",
+    pdf: "/SCAI-Flyer-CA-Opleiding-2026.pdf",
+  },
+  {
     slug: "scai-flyer-ca-opleiding-2025",
     title: "SCAI – Flyer CA Opleiding 2025",
     date: "March 12, 2025",

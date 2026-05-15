@@ -51,7 +51,38 @@ export default function TrainingPage({ params }: { params: { slug: string } }) {
               </p>
             ))}
 
-            <div style={{ background: "#EBF5FD", borderRadius: 8, padding: "24px 28px", marginTop: 32, marginBottom: 40, borderLeft: "4px solid #00AEEF" }}>
+            {item.pdf && (
+              <div style={{ marginTop: 40, marginBottom: 40 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+                  <p style={{ fontWeight: 700, color: C.text, fontSize: "1rem" }}>Flyer (PDF)</p>
+                  <a
+                    href={item.pdf}
+                    download
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      background: "#2B3990",
+                      color: "white",
+                      padding: "10px 20px",
+                      borderRadius: 4,
+                      fontSize: "0.85rem",
+                      fontWeight: 700,
+                      textDecoration: "none",
+                    }}
+                  >
+                    ⬇ Download PDF
+                  </a>
+                </div>
+                <iframe
+                  src={item.pdf}
+                  style={{ width: "100%", height: 520, border: "1px solid #D1D5DB", borderRadius: 6 }}
+                  title="Flyer CA Opleiding 2026"
+                />
+              </div>
+            )}
+
+            <div style={{ background: "#EBF5FD", borderRadius: 8, padding: "24px 28px", marginBottom: 40, borderLeft: "4px solid #00AEEF" }}>
               <p style={{ fontSize: "0.9rem", color: "#0075BE", fontWeight: 600, marginBottom: 6 }}>Register or request more information:</p>
               <a href="mailto:info@scai.sr" style={{ color: "#2B3990", fontWeight: 700, fontSize: "0.95rem" }}>info@scai.sr</a>
             </div>
