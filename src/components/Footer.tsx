@@ -25,7 +25,7 @@ export default function Footer() {
           <div>
             <h4 style={{ color: "#00AEEF", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>Contact</h4>
             <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem", lineHeight: 1.75 }}>
-              Mr. Jagernath Lachmonstraat 158<br />
+              Tapanahonystraat 2<br />
               Paramaribo, Suriname<br /><br />
               <a href="tel:+5978955707" style={{ color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>+597 895 5707</a><br />
               <a href="mailto:info@scai.sr" style={{ color: "#00AEEF", textDecoration: "none" }}>info@scai.sr</a>

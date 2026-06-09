@@ -35,7 +35,7 @@ export default function ContactPage() {
 
               <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
                 {[
-                  { icon: "\u{1F4CD}", label: "Address", value: "Mr. Jagernath Lachmonstraat 158\nParamaribo, Suriname" },
+                  { icon: "\u{1F4CD}", label: "Address", value: "Tapanahonystraat 2\nParamaribo, Suriname" },
                   { icon: "\u{1F4DE}", label: "Phone", value: "+597 895 5935 / +597 895 5707\n+597 421 466" },
                   { icon: "\u2709\uFE0F", label: "Email", value: "info@scai.sr" },
                 ].map((c, i) => (

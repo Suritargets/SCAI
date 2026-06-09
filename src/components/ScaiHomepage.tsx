@@ -733,7 +733,7 @@ export default function SCAIWebsite() {
 
               <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
                 {[
-                  { icon: "📍", label: "Adres", value: "Mr. Jagernath Lachmonstraat 158\nParamaribo, Suriname" },
+                  { icon: "📍", label: "Adres", value: "Tapanahonystraat 2\nParamaribo, Suriname" },
                   { icon: "📞", label: "Telefoon", value: "+597 895 5935 / +597 895 5707\n+597 421 466" },
                   { icon: "✉️", label: "Email", value: "info@scai.sr" },
                 ].map((c, i) => (
@@ -853,7 +853,7 @@ export default function SCAIWebsite() {
             <div>
               <h4 style={{ color: "#00AEEF", fontWeight: 700, fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>Contact</h4>
               <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem", lineHeight: 1.75 }}>
-                Mr. Jagernath Lachmonstraat 158<br />
+                Tapanahonystraat 2<br />
                 Paramaribo, Suriname<br /><br />
                 <a href="tel:+5978955707">+597 895 5707</a><br />
                 <a href="mailto:info@scai.sr" style={{ color: "#00AEEF" }}>info@scai.sr</a>
