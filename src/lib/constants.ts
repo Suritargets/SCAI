@@ -125,6 +125,64 @@ export const MANDATES = [
 
 export const TRAINING_EVENTS = [
   {
+    slug: "beyond-the-numbers-masterclass-2026",
+    title: "Beyond the Numbers — AI, Risico's, Fraude & Financiële Criminaliteit",
+    date: "October 27, 29 & 30, 2026",
+    image: "/conference.png",
+    excerpt: "Exclusieve driedelige masterclassreeks voor accountants, controllers en andere financiële professionals. Spreker: Dr. Eric J.H.J. Mantelaars RA AA CFE CISA C|CISO. Data: 27, 29 en 30 oktober 2026 — 10:00 tot 14:00 uur.",
+    content: `Technologie verandert het vak. Fraudeurs veranderen hun werkwijze. Regelgeving verandert de verwachtingen. Bent u klaar voor wat komt?
+
+Kunstmatige intelligentie, toenemende digitalisering, strengere regelgeving en groeiende aandacht voor fraude en financiële criminaliteit zorgen ervoor dat het werk van accountants, controllers, en andere financiële professionals ingrijpend verandert.
+
+Tijdens deze exclusieve driedelige masterclassreeks ontdekt u hoe deze ontwikkelingen samenhangen en welke kennis en vaardigheden nodig zijn om ook in de toekomst relevant en effectief te blijven.
+
+De masterclasses combineren theorie, regelgeving, praktijkervaring, actuele casuïstiek, interactieve discussies en serious gaming. Geen traditionele hoorcolleges, maar een dynamisch leerprogramma waarin deelnemers actief worden uitgedaagd om risico's te herkennen, dilemma's te beoordelen en oplossingen te ontwikkelen voor situaties die rechtstreeks uit de praktijk afkomstig zijn.
+
+Spreker: Dr. Eric J.H.J. Mantelaars RA AA CFE CISA C|CISO
+
+PROGRAMMA
+
+Dagdeel 1 — 27 oktober 2026: Artificial Intelligence (AI): hype, realiteit en toepassingen
+- De verschillende vormen van AI
+- De impact van AI op finance, audit en control
+- Kansen en risico's van AI
+- Relevante wet- en regelgeving
+- Praktische toepassingen binnen de financiële functie
+- Praktijkcases
+- De invloed van AI op de toekomstige financial
+
+Dagdeel 2 — 29 oktober 2026: Risico's, Fraude en Financiële Criminaliteit (deel 1)
+Dagdeel 3 — 30 oktober 2026: Risico's, Fraude en Financiële Criminaliteit (deel 2)
+- Actuele ontwikkelingen in risicomanagement
+- Financiële criminaliteit en frauderisico's
+- Relevante wet- en regelgeving
+- Actuele NBA-handreikingen
+- De gewijzigde Standaard 240
+- Frauderisicofactoren en red flags
+- De rol van data en technologie bij fraudedetectie
+- Governance, integriteit en professioneel-kritische instelling
+- Praktijkcasussen uit binnen- en buitenland
+
+Tijden: 10:00 tot 14:00 uur (inclusief pauze en netwerkmoment)
+Locatie: Wordt nog bekendgemaakt
+
+INVESTERING
+
+27, 29 en 30 oktober 2026: USD 550 (SCAI leden) / USD 650 (niet-leden)
+29 en 30 oktober 2026: USD 400 (SCAI leden) / USD 450 (niet-leden)
+27 oktober 2026: USD 200 (SCAI leden) / USD 225 (niet-leden)
+
+SPREKER
+
+Dr. Eric J.H.J. Mantelaars RA AA CFE CISA C|CISO is partner bij RSM Netherlands, Professor of Applied Sciences bij het lectoraat 'Futureproof Auditor' aan Zuyd Hogeschool en docent aan onder meer de accountantsopleiding van Maastricht University. Tevens is hij als directeur verbonden aan het Executive Program 'Financial Crime Professional' van het Erasmus Institute of Business Economics BV (EIBE BV) te Rotterdam. Hij promoveerde op de relatie tussen Audit Quality en Audit Technology en doet onderzoek naar AI, fraudedetectie, Audit Quality, data-analyse en financiële criminaliteit.
+
+VOOR WIE?
+
+Registeraccountants (RA), Accountant-Administratieconsulenten (AA), Registercontrollers (RC), CISA's, CISO's en andere IT-auditors, Internal Auditors, Certified Fraud Examiners (CFE), Compliance Professionals, Financial Controllers, CFO's, Financieel managers, Risk Managers, en andere professionals werkzaam binnen finance, governance, audit en compliance.`,
+    category: "Masterclass",
+    pdf: "/SCAI-Beyond-The-Numbers-Masterclass-2026.pdf",
+  },
+  {
     slug: "scai-flyer-ca-opleiding-2026",
     title: "SCAI – Flyer CA Opleiding 2026",
     date: "May 15, 2026",
