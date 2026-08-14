@@ -29,7 +29,56 @@ export default function TrainingEventsBlock() {
                   boxShadow: "0 2px 16px rgba(0,0,0,0.09)",
                   border: "1px solid #E5EBF5",
                 }}>
-                  {/* Image */}
+                  {/* Image / Flyer preview */}
+                  {current.pdf ? (
+                    <div style={{
+                      height: 220, overflow: "hidden", position: "relative",
+                      background: "linear-gradient(160deg, #dceeff 0%, #b8d9f5 40%, #8ec8f0 100%)",
+                      display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center",
+                      padding: "0 28px",
+                    }}>
+                      {/* Decorative left bar like the flyer */}
+                      <div style={{
+                        position: "absolute", left: 0, top: 0, bottom: 0,
+                        width: 8,
+                        background: "linear-gradient(180deg, #4a4a4a 0%, #2B3990 50%, #00AEEF 100%)",
+                      }} />
+                      {/* SCAI logo top-right hint */}
+                      <div style={{
+                        position: "absolute", top: 14, right: 16,
+                        background: "white", borderRadius: 4, padding: "4px 10px",
+                        boxShadow: "0 1px 6px rgba(0,0,0,0.12)",
+                      }}>
+                        <span style={{ fontSize: "0.6rem", fontWeight: 900, color: "#2B3990", letterSpacing: "0.06em" }}>■ SCAI</span>
+                      </div>
+                      {/* Flyer text content */}
+                      <div style={{ textAlign: "center", zIndex: 1 }}>
+                        <p style={{ fontSize: "1.15rem", fontWeight: 900, color: "#1a2a70", letterSpacing: "0.04em", marginBottom: 6, lineHeight: 1.2 }}>
+                          BEYOND THE NUMBERS
+                        </p>
+                        <p style={{ fontSize: "0.78rem", fontWeight: 700, color: "#0d47a1", marginBottom: 10, lineHeight: 1.4 }}>
+                          AI, Risico&apos;s, Fraude &amp;<br />Financiële Criminaliteit
+                        </p>
+                        <p style={{ fontSize: "0.68rem", color: "#1e3a6e", lineHeight: 1.5, maxWidth: 260 }}>
+                          Exclusieve masterclassreeks voor accountants, controllers en andere financiële professionals
+                        </p>
+                        <div style={{ marginTop: 10, display: "flex", gap: 6, justifyContent: "center", flexWrap: "wrap" }}>
+                          {["27 okt", "29 okt", "30 okt"].map((d) => (
+                            <span key={d} style={{ background: "#2B3990", color: "white", fontSize: "0.6rem", fontWeight: 700, padding: "3px 8px", borderRadius: 2 }}>{d} 2026</span>
+                          ))}
+                        </div>
+                      </div>
+                      {/* Category badge */}
+                      <div style={{
+                        position: "absolute", top: 16, left: 20,
+                        background: "#00AEEF", color: "white",
+                        fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em",
+                        textTransform: "uppercase", padding: "4px 10px", borderRadius: 2,
+                      }}>
+                        {current.category}
+                      </div>
+                    </div>
+                  ) : (
                   <div style={{
                     height: 220, overflow: "hidden",
                     backgroundImage: `url('${current.image}')`,
@@ -50,6 +99,7 @@ export default function TrainingEventsBlock() {
                       {current.category}
                     </div>
                   </div>
+                  )}
 
                   {/* Card body */}
                   <div style={{ padding: "20px 24px 24px", background: "#f9fafb" }}>
